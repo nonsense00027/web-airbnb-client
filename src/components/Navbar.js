@@ -8,15 +8,15 @@ import {
 
 function Navbar() {
   return (
-    <div className="py-6">
-      <div className="max-w-screen-xl mx-auto flex items-center">
+    <div className="py-4 z-50 bg-white fixed left-0 top-0 w-screen">
+      <div className="relative max-w-screen-xl mx-auto flex items-center justify-between">
         <img
           src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Airbnb_Logo_B%C3%A9lo.svg/2560px-Airbnb_Logo_B%C3%A9lo.svg.png"
           alt=""
           className="h-8"
         />
 
-        <div className="flex items-center justify-center flex-1 mx-auto">
+        <div className="absolute top-0 left-0 right-0 m-auto flex items-center justify-center flex-1 mx-auto">
           <div className="flex items-center w-80 border border-gray-200 rounded-full py-2 px-2 shadow-sm">
             <input
               type="text"
