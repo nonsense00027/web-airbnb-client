@@ -1,11 +1,11 @@
 import React from "react";
-import SectionTitle from "../../components/SectionTitle";
-import Discover from "./Discover";
-import Inspirations from "./Inspirations";
+import SectionTitle from "components/SectionTitle";
+import Discover from "pages/Landing/Discover";
+import Inspirations from "pages/Landing/Inspirations";
 
 function Landing() {
   return (
-    <div className="pt-32">
+    <div className="pt-40">
       {/* BANNER */}
       <div className="bg-black h-[130vh] w-screen -z-10 absolute top-0 left-0"></div>
       <main className="max-w-screen-xl mt-10 mx-auto bg-primary text-white rounded-xl flex flex-col items-center justify-center  gap-5 h-96">
