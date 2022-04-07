@@ -34,7 +34,7 @@ function Host() {
 
       <CustomSelect />
 
-      <section className="h-[95vh] relative flex p-20 rounded-xl overflow-hidden mb-20 max-w-screen-xl mx-auto">
+      <section className="h-[95vh] relative flex p-20 mt-20 rounded-xl overflow-hidden mb-20 max-w-screen-xl mx-auto">
         <img
           src="https://images.pexels.com/photos/8562070/pexels-photo-8562070.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
           alt=""
