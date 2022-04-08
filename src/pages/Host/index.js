@@ -1,11 +1,27 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Carousel from "./Carousel";
 import CustomSelect from "./CustomSelect";
 import logoicon from "../../assets/img/logo-icon.png";
+import Navbar from "./Navbar";
+import { PlayIcon, PauseIcon } from "@heroicons/react/solid";
 
 function Host() {
+  const videoRef = useRef(null);
+  const [videoPlaying, setVideoPlaying] = useState(true);
+
+  const handleVideo = () => {
+    if (videoRef.current.paused) {
+      videoRef.current.play();
+      setVideoPlaying(true);
+    } else {
+      videoRef.current.pause();
+      setVideoPlaying(false);
+    }
+  };
+
   return (
     <div>
+      <Navbar />
       <main className="flex h-screen">
         <div className="flex-1 bg-black text-white flex flex-col items-center justify-center">
           <img
@@ -20,13 +36,27 @@ function Host() {
             Try hosting
           </button>
         </div>
-        <div className="flex-1">
+        <div className="flex-1 relative">
           <video
+            ref={videoRef}
             src="https://a0.muscache.com/v/a9/a7/a9a7873c-95de-5e37-8995-a5abb5b6b02f/a9a7873c95de5e378995a5abb5b6b02f_4000k_1.mp4"
             autoPlay
             muted
             className="h-full w-full object-cover object-top"
           ></video>
+          <div className="absolute bottom-20 left-10">
+            {!videoPlaying ? (
+              <PlayIcon
+                className="h-12 w-12 text-white cursor-pointer"
+                onClick={handleVideo}
+              />
+            ) : (
+              <PauseIcon
+                className="h-12 w-12 text-white cursor-pointer"
+                onClick={handleVideo}
+              />
+            )}
+          </div>
         </div>
       </main>
 
